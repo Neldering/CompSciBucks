@@ -11,51 +11,59 @@ public class JavaCalculatorNCE {
       
       Scanner kb = new Scanner(System.in);
       
-      System.out.println("INSTRUCTIONS");
+      System.out.println("This calculator will take 3 inputs from you");
+	  System.out.println("The first two will be integers between 0-9");
+	  System.out.println("The third will be the operator you would like to preform");
+	  System.out.println(" '+' addition, '-' subtraction, '*' multiplication, '/' division, '^' to the power of ");
+
       
-      System.out.print("Num1 ");
+      System.out.print("Please enter your first number. > ");
       num1Int = kb.nextInt();
       num1 = (double)num1Int;
       System.out.println();
       
       
-      System.out.print("Num2 ");
+      System.out.print("Please enter your second number > ");
       num2Int = kb.nextInt();
       num2 = (double)num2Int;
       System.out.println();
       
-      System.out.print("1 is +, 2 is -, 3 is *, 4 is /, 5 is %, 6 is ^ \n Please enter your operator: " );
+      System.out.println("Please enter your operator" );
+      System.out.print(" '+' addition, '-' subtraction, '*' multiplication, '/' division, '^' to the power of > " );
       operat = kb.next().charAt(0);
       System.out.println();
 
       switch (num1Int)
       {
+		 case 0:
+			num1String = "zero";
+			break;
          case 1:
-            num1String = "One";
+            num1String = "one";
             break;
          case 2:
-            num1String = "Two";
+            num1String = "two";
             break;
          case 3:
-            num1String = "Three";
+            num1String = "three";
             break;
          case 4:
-            num1String = "Four";
+            num1String = "four";
             break;
          case 5:
-            num1String = "Five";
+            num1String = "five";
             break;
          case 6:
-            num1String = "Six";
+            num1String = "six";
             break;
          case 7:
-            num1String = "Seven";
+            num1String = "seven";
             break;
          case 8:
-            num1String = "Eight";
+            num1String = "eight";
             break;
          case 9:
-            num1String = "Nine";
+            num1String = "nine";
             break;
          default:
             System.out.println("Invalid Entry");
@@ -65,32 +73,35 @@ public class JavaCalculatorNCE {
       
       switch (num2Int)
       {
+		 case 0:
+			num2String = "zero";
+			break;
          case 1:
-            num2String = "One";
+            num2String = "one";
             break;
          case 2:
-            num2String = "Two";
+            num2String = "two";
             break;
          case 3:
-            num2String = "Three";
+            num2String = "three";
             break;
          case 4:
-            num2String = "Four";
+            num2String = "four";
             break;
          case 5:
-            num2String = "Five";
+            num2String = "five";
             break;
          case 6:
-            num2String = "Six";
+            num2String = "six";
             break;
          case 7:
-            num2String = "Seven";
+            num2String = "seven";
             break;
          case 8:
-            num2String = "Eight";
+            num2String = "eight";
             break;
          case 9:
-            num2String = "Nine";
+            num2String = "nine";
             break;
          default: 
             System.out.println("Invalid Entry");
@@ -102,33 +113,29 @@ public class JavaCalculatorNCE {
       {
          case '+':
             finishedValue = num1 + num2;
-            operatString = "Plus";
+            operatString = "plus";
             break;
          case '-':
             finishedValue = num1 - num2;
-            operatString = "Minus";
+            operatString = "minus";
             break;
          case '*':
             finishedValue = num1 * num2;
-            operatString = "Mutiply by";
+            operatString = "multiplied by";
             break;
          case '/':
             if( num2 == 0) {
-               System.out.println("Invalid Entry Cannot Divide by 0");
+               System.out.println("Division by zero is not allowed");
                System.exit(0);
             }
             else {
                finishedValue = num1 / num2;
-               operatString = "Divide by";
+               operatString = "divided by";
             }
-            break;
-         case '%':
-            finishedValue = num1 % num2;
-            operatString = "Modular";
             break;
          case '^':
             finishedValue = Math.pow(num1, num2);
-            operatString = "Power of";
+            operatString = "to the power of";
             break;
          default:
             System.out.println("Invalid Operator");
@@ -136,6 +143,6 @@ public class JavaCalculatorNCE {
             break;
       }
   
-      System.out.printf("This is where we put all the nums and the string operators");
+      System.out.printf("%d %s %d is %f", num1Int, operatString, num2Int, finishedValue);
    }
 }  
