@@ -66,7 +66,7 @@ public class JavaCalculatorNCE {
             num1String = "nine";
             break;
          default:
-            System.out.println("Invalid Entry");
+            System.out.println("Invalid number");
             System.exit(0);
             break;
       }
@@ -104,7 +104,7 @@ public class JavaCalculatorNCE {
             num2String = "nine";
             break;
          default: 
-            System.out.println("Invalid Entry");
+            System.out.println("Invalid number");
             System.exit(0);
             break;
       }
@@ -143,6 +143,6 @@ public class JavaCalculatorNCE {
             break;
       }
   
-      System.out.printf("%d %s %d is %f", num1Int, operatString, num2Int, finishedValue);
+      System.out.printf("%d %s %d is %.2f\n", num1Int, operatString, num2Int, finishedValue);
    }
 }  
