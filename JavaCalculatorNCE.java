@@ -143,6 +143,6 @@ public class JavaCalculatorNCE {
             break;
       }
   
-      System.out.printf("%d %s %d is %.2f\n", num1Int, operatString, num2Int, finishedValue);
+      System.out.printf("%s %s %s is %.2f\n", num1String, operatString,  num2String, finishedValue);
    }
 }  
