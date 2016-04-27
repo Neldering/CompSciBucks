@@ -1,4 +1,7 @@
-
+//Nicolas Eldering
+//Assignment 12
+//Array Squred and Times 3
+//4/27/016
 
 public class ArrayAlphaSquare
 {
