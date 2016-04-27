@@ -1,3 +1,8 @@
+//Nicolas Eldering
+//Assignment 12
+//Gymnastics score calculator
+//4/27/016
+
 import java.util.*;
 
 public class Gymnastics
@@ -6,8 +11,7 @@ public class Gymnastics
    {
       
       double[] scores;
-      double max, min;
-      double total;
+      double max, min, total;
       
       Scanner kb = new Scanner(System.in);
       
@@ -16,15 +20,16 @@ public class Gymnastics
       //Instructions
       System.out.println("This program will calculate the score for one Gymnist at a time");
       System.out.println("It will ask for the scores of the 8 judges");
-      System.out.println("then calculate the max and min and subtract them from the printed total\n");
-      
+      System.out.println("then calculate the max and min and subtract them from the calculated total\n");
+      System.out.println("The final line will be the total points for the gymnist.");
+            
       //Input 8 Scores
       for (int i=0; i<scores.length; i++) {
          System.out.print("Enter score number " + (i+1)+ " here: ");
          scores[i] = kb.nextDouble();
-         while (scores[i] < 0 || scores[i] > 10)
+         while (scores[i] < 1 || scores[i] > 10)
          {
-            System.out.println("Scores can only be between 0 and 10");
+            System.out.println("Scores can only be between 1 and 10");
             System.out.print("Enter score number " + (i+1)+ " here: ");
             scores[i] = kb.nextDouble();
          }
